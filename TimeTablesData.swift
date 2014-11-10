@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class TimeTablesData {
     
@@ -26,10 +27,16 @@ class TimeTablesData {
     var knownTimeTables = [String]()
     var currentlyLearningTimeTable:String?
     var allTimeTables = [String]()
+    var numberButtons = [String:UIButton]()
     
     init()
     {
         initTimeTables()
+    }
+    
+    func cleanNumberButtons()
+    {
+        numberButtons = [String:UIButton]()
     }
     
     func initTimeTables()
@@ -68,5 +75,30 @@ class TimeTablesData {
         }
         return unknownTimeTables
     }
+    
+    func fillTimeTablesArray()
+    {
+        for (buttonName, button) in numberButtons
+        {
+            if(button.selected)
+            {
+                knownTimeTables.append(buttonName)
+            }
+        }
+    }
+    
+    func changeColorForButtonHelper(sender:UIButton)
+    {
+        println((sender.titleLabel?.text)!)
+        var dictinaryKey = (sender.titleLabel?.text)!
+        var button = numberButtons[dictinaryKey]
+        var selected = button?.selected
+        println("before selected")
+        println(button?.selected)
+        button?.selected = !selected!
+        println(numberButtons[dictinaryKey]?.selected)
+        
+    }
+
     
 }

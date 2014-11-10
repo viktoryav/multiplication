@@ -25,27 +25,31 @@ class MultiplicationViewController: UIViewController {
     
     var dataClass = TimeTablesData()
     
-    var numberButtons = [String:UIButton]()
-
     
     override func viewDidLoad() {
-        numberButtons[dataClass.one] = buttonOne
-        numberButtons[dataClass.two] = buttonTwo
-        numberButtons[dataClass.three] = buttonThree
-        numberButtons[dataClass.four] = buttonFour
-        numberButtons[dataClass.five] = buttonFive
-        numberButtons[dataClass.six] = buttonSix
-        numberButtons[dataClass.seven] = buttonSeven
-        numberButtons[dataClass.eight] = buttonEight
-        numberButtons[dataClass.nine] = buttonNine
-        numberButtons[dataClass.ten] = buttonTen
-        numberButtons[dataClass.eleven] = buttonEleven
-        numberButtons[dataClass.twelve] = buttonTwelve
         super.viewDidLoad()
+        initNumberButtons()
+    }
+    
+    func initNumberButtons()
+    {
+        dataClass.cleanNumberButtons()
+        dataClass.numberButtons[dataClass.one] = buttonOne
+        dataClass.numberButtons[dataClass.two] = buttonTwo
+        dataClass.numberButtons[dataClass.three] = buttonThree
+        dataClass.numberButtons[dataClass.four] = buttonFour
+        dataClass.numberButtons[dataClass.five] = buttonFive
+        dataClass.numberButtons[dataClass.six] = buttonSix
+        dataClass.numberButtons[dataClass.seven] = buttonSeven
+        dataClass.numberButtons[dataClass.eight] = buttonEight
+        dataClass.numberButtons[dataClass.nine] = buttonNine
+        dataClass.numberButtons[dataClass.ten] = buttonTen
+        dataClass.numberButtons[dataClass.eleven] = buttonEleven
+        dataClass.numberButtons[dataClass.twelve] = buttonTwelve
     }
 
     @IBAction func changeColorForButton(sender: UIButton) {
-        changeColorForButtonHelper(sender)
+        dataClass.changeColorForButtonHelper(sender)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,44 +65,12 @@ class MultiplicationViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "goMultiplicationChoose" {
-            fillTimeTablesArray()
+            dataClass.fillTimeTablesArray()
             var selectStudyViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
             selectStudyViewController.dataClass=dataClass
-
         }
         
     }
     
-    func fillTimeTablesArray()
-    {
-        for (buttonName, button) in numberButtons
-        {
-            if(button.selected)
-            {
-                dataClass.knownTimeTables.append(buttonName)
-            }
-        }
-    }
     
-    func changeColorForButtonHelper(sender:UIButton)
-    {
-        println((sender.titleLabel?.text)!)
-        var dictinaryKey = (sender.titleLabel?.text)!
-        var button = numberButtons[dictinaryKey]
-        var selected = button?.selected
-        button?.selected = !selected!
-        if(selected!)
-        {
-            println("not selected")
-        }
-        else
-        {
-            
-                sender.layer.borderColor = UIColor.whiteColor().CGColor
-                sender.layer.borderWidth = 3
-                sender.layer.cornerRadius = sender.frame.size.width / 2
-        }
-        
-    }
-
 }
