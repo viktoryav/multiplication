@@ -20,6 +20,8 @@ class TimeTablesData {
     let eight = "8"
     let nine = "9"
     let ten = "10"
+    let eleven="11"
+    let twelve="12"
     
     var knownTimeTables = [String]()
     var currentlyLearningTimeTable:String?

@@ -9,6 +9,8 @@
 import UIKit
 
 class MultiplicationChooseViewController: UIViewController {
+    
+    var dataClass:TimeTablesData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
