@@ -1,5 +1,5 @@
 //
-//  MultiplicationViewController.swift
+//  MultiplicationChooseViewController.swift
 //  Multiplication
 //
 //  Created by Vika on 10/11/2014.
@@ -8,21 +8,8 @@
 
 import UIKit
 
-class MultiplicationViewController: UIViewController {
+class MultiplicationChooseViewController: UIViewController {
 
-    @IBOutlet weak var buttonOne: UIButton!
-    @IBOutlet weak var buttonTwo: UIButton!
-    @IBOutlet weak var buttonThree: UIButton!
-    @IBOutlet weak var buttonFour: UIButton!
-    @IBOutlet weak var buttonFive: UIButton!
-    @IBOutlet weak var buttonSix: UIButton!
-    @IBOutlet weak var buttonSeven: UIButton!
-    @IBOutlet weak var buttonEight: UIButton!
-    @IBOutlet weak var buttonNine: UIButton!
-    @IBOutlet weak var buttonTen: UIButton!
-    @IBOutlet weak var buttonEleven: UIButton!
-    @IBOutlet weak var buttonTwelve: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
