@@ -66,8 +66,8 @@ class MultiplicationViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "goMultiplicationChoose" {
             dataClass.fillTimeTablesArray()
-            var selectStudyViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
-            selectStudyViewController.dataClass=dataClass
+            var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
+            multiplicationChooseViewController.dataClass=dataClass
         }
         
     }
