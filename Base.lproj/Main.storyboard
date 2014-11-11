@@ -532,10 +532,10 @@
             </objects>
             <point key="canvasLocation" x="2221" y="738"/>
         </scene>
-        <!--View Controller-->
+        <!--Practice View Controller-->
         <scene sceneID="lsg-fJ-VVE">
             <objects>
-                <viewController id="dxO-7M-uSz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="practice" id="dxO-7M-uSz" customClass="PracticeViewController" customModule="Multiplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qL2-z3-Wdk"/>
                         <viewControllerLayoutGuide type="bottom" id="hPl-1y-Xej"/>

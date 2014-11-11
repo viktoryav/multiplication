@@ -12,4 +12,14 @@ enum StudyTypeEnum
     case RECAP
     case LEARN_NEW
     case PRACTICE_ALL
+    
+    static func getEnumByName(buttonName:String) -> StudyTypeEnum
+    {
+        switch buttonName
+        {
+            case "Recap":return StudyTypeEnum.RECAP
+            case "Learn New":return StudyTypeEnum.LEARN_NEW
+            default:return StudyTypeEnum.PRACTICE_ALL
+        }
+    }
 }

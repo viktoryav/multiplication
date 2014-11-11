@@ -9,10 +9,11 @@
 import UIKit
 
 class PracticeViewController: UIViewController {
+    var dataClass:TimeTablesData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        println(dataClass.studyType)
         // Do any additional setup after loading the view.
     }
 
