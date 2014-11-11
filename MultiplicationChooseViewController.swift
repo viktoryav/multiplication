@@ -66,8 +66,24 @@ class MultiplicationChooseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func changeButtonsColor(sender: UIButton) {
-        dataClass.changeColorForButtonHelper(sender)
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        println("in prepareForSegue !backMCtoHome")
+        if segue.identifier != "backMCtoHome" {
+            println("in prepareForSegue !backMCtoHome2")
+            var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
+            if let button = sender as? UIButton {
+                println(button.titleLabel?.text)
+                dataClass.choosenTimesTable=button.titleLabel?.text
+            }
+            studyTypeViewController.dataClass=dataClass
+        }
+        
     }
 
-    }
+
+}

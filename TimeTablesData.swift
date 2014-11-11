@@ -25,9 +25,11 @@ class TimeTablesData {
     let twelve="12"
     
     var knownTimeTables = [String]()
-    var currentlyLearningTimeTable:String?
     var allTimeTables = [String]()
     var numberButtons = [String:UIButton]()
+    var calculationType:CalculationTypesEnum!
+    var choosenTimesTable:String?
+    var studyType:StudyTypeEnum!
     
     init()
     {
@@ -51,6 +53,8 @@ class TimeTablesData {
         allTimeTables.append(eight)
         allTimeTables.append(nine)
         allTimeTables.append(ten)
+        allTimeTables.append(eleven)
+        allTimeTables.append(twelve)
     }
     
     func getUnknownTimeTables() -> Array<String>

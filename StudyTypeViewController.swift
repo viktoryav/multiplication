@@ -9,10 +9,11 @@
 import UIKit
 
 class StudyTypeViewController: UIViewController {
+    var dataClass:TimeTablesData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        println(dataClass.choosenTimesTable)
         // Do any additional setup after loading the view.
     }
 

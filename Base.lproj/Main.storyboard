@@ -288,7 +288,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="CZX-YO-Km2"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="g2M-2B-nu5"/>
                                 </connections>
                             </button>
@@ -301,7 +300,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="1gS-kf-ibD"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" identifier="elevenToChooseMMethod" id="H8h-DR-ck9"/>
                                 </connections>
                             </button>
@@ -314,7 +312,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="JhK-QN-ZS4"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="Lxp-Ow-cLo"/>
                                 </connections>
                             </button>
@@ -344,7 +341,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="XPd-A4-jcC"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" identifier="twoToChooseMMethod" id="cd3-Bc-Rf2"/>
                                 </connections>
                             </button>
@@ -357,7 +353,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="MFl-3c-mdh"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" identifier="threeToChooseMMethod" id="Zia-gL-V6q"/>
                                 </connections>
                             </button>
@@ -370,7 +365,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="jQ0-1Y-imP"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="lNy-00-Ebi"/>
                                 </connections>
                             </button>
@@ -383,7 +377,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="6xe-3G-ErY"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="TnK-Ht-BuU"/>
                                 </connections>
                             </button>
@@ -396,7 +389,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="TDk-vV-j3o"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="A71-JD-3NC"/>
                                 </connections>
                             </button>
@@ -409,7 +401,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="O1R-gA-FVn"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="w8n-Ft-i3b"/>
                                 </connections>
                             </button>
@@ -422,7 +413,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Ktt-pn-8ND"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="BeI-qZ-Xpg"/>
                                 </connections>
                             </button>
@@ -435,7 +425,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="A4T-q6-BHB"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" id="mNG-IU-0cD"/>
                                 </connections>
                             </button>
@@ -448,7 +437,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeButtonsColor:" destination="gHa-RP-XQa" eventType="touchUpInside" id="sGN-v7-Axl"/>
                                     <segue destination="Tbb-nb-h9R" kind="show" identifier="oneToChooseMMethod" id="5gL-cX-pLK"/>
                                 </connections>
                             </button>
