@@ -11,4 +11,13 @@ enum CalculationTypesEnum
 {
     case MULTIPLICATION
     case DIVISION
+    
+    static func getEnumByName(buttonName:String) -> CalculationTypesEnum
+    {
+        switch buttonName
+        {
+            case "Division":return CalculationTypesEnum.DIVISION
+            default:return CalculationTypesEnum.MULTIPLICATION
+        }
+    }
 }

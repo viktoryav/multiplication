@@ -23,7 +23,7 @@ class MultiplicationViewController: UIViewController {
     @IBOutlet weak var buttonEleven: UIButton!
     @IBOutlet weak var buttonTwelve: UIButton!
     
-    var dataClass = TimeTablesData()
+    var dataClass:TimeTablesData!
     
     
     override func viewDidLoad() {

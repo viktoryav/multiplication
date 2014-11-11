@@ -38,7 +38,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bBo-Hl-tmB" kind="show" identifier="goDivisionMain" id="zRi-Jr-hk6"/>
+                                    <segue destination="aLh-Gw-iSE" kind="show" identifier="goDivisionMain" id="zxu-qM-0PC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -556,26 +556,6 @@
             </objects>
             <point key="canvasLocation" x="2628" y="738"/>
         </scene>
-        <!--Division View Controller-->
-        <scene sceneID="xJ3-dj-bnA">
-            <objects>
-                <viewController storyboardIdentifier="divisionMain" id="bBo-Hl-tmB" customClass="DivisionViewController" customModule="Multiplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="O2A-BX-Md7"/>
-                        <viewControllerLayoutGuide type="bottom" id="hAX-Qe-Nuv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mQH-EE-BNV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9k6-TU-Ibj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1347" y="1403"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="agk-pV-O9m">
             <objects>
@@ -602,6 +582,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tpK-Sj-H4D"/>
+        <segue reference="zxu-qM-0PC"/>
         <segue reference="H8h-DR-ck9"/>
         <segue reference="7J5-Ni-22w"/>
     </inferredMetricsTieBreakers>
