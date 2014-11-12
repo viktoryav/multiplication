@@ -109,9 +109,19 @@ class TimeTablesData {
     func getTestsAsString(tests:[String])->String
     {
         var testsString=""
+        var counter=1
         for test in tests
         {
-            testsString = testsString + test + ","
+            if(counter == tests.count)
+            {
+                testsString = testsString + test
+            }
+            else
+            {
+                testsString = testsString + test + ", "
+            }
+            
+            counter++
             
         }
         return testsString
