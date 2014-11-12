@@ -20,4 +20,16 @@ enum CalculationTypesEnum
             default:return CalculationTypesEnum.MULTIPLICATION
         }
     }
+    
+    static func getStringByEnum(calculationType:CalculationTypesEnum) -> String
+    {
+        if(calculationType == CalculationTypesEnum.MULTIPLICATION)
+        {
+            return "x";
+        }
+        else
+        {
+            return("/");
+        }
+    }
 }

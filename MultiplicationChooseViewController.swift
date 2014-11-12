@@ -22,6 +22,8 @@ class MultiplicationChooseViewController: UIViewController {
     @IBOutlet weak var buttonTen: UIButton!
     @IBOutlet weak var buttonEleven: UIButton!
     @IBOutlet weak var buttonTwelve: UIButton!
+    @IBOutlet weak var recapLabel: UIButton!
+    
     
     var dataClass:TimeTablesData!
 
@@ -32,7 +34,7 @@ class MultiplicationChooseViewController: UIViewController {
         {
             for (buttonName, button) in dataClass.numberButtons
             {
-                if(choosenButtonName == buttonName)
+                if(choosenButtonName.description == buttonName)
                 {
                     println("in selected")
                     button.hidden=true
@@ -44,21 +46,23 @@ class MultiplicationChooseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     func initNumberButtons()
     {
         dataClass.cleanNumberButtons()
-        dataClass.numberButtons[dataClass.one] = buttonOne
-        dataClass.numberButtons[dataClass.two] = buttonTwo
-        dataClass.numberButtons[dataClass.three] = buttonThree
-        dataClass.numberButtons[dataClass.four] = buttonFour
-        dataClass.numberButtons[dataClass.five] = buttonFive
-        dataClass.numberButtons[dataClass.six] = buttonSix
-        dataClass.numberButtons[dataClass.seven] = buttonSeven
-        dataClass.numberButtons[dataClass.eight] = buttonEight
-        dataClass.numberButtons[dataClass.nine] = buttonNine
-        dataClass.numberButtons[dataClass.ten] = buttonTen
-        dataClass.numberButtons[dataClass.eleven] = buttonEleven
-        dataClass.numberButtons[dataClass.twelve] = buttonTwelve
+        dataClass.numberButtons[dataClass.one.description] = buttonOne
+        dataClass.numberButtons[dataClass.two.description] = buttonTwo
+        dataClass.numberButtons[dataClass.three.description] = buttonThree
+        dataClass.numberButtons[dataClass.four.description] = buttonFour
+        dataClass.numberButtons[dataClass.five.description] = buttonFive
+        dataClass.numberButtons[dataClass.six.description] = buttonSix
+        dataClass.numberButtons[dataClass.seven.description] = buttonSeven
+        dataClass.numberButtons[dataClass.eight.description] = buttonEight
+        dataClass.numberButtons[dataClass.nine.description] = buttonNine
+        dataClass.numberButtons[dataClass.ten.description] = buttonTen
+        dataClass.numberButtons[dataClass.eleven.description] = buttonEleven
+        dataClass.numberButtons[dataClass.twelve.description] = buttonTwelve
     }
 
     override func didReceiveMemoryWarning() {

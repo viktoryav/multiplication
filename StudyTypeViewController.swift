@@ -11,10 +11,29 @@ import UIKit
 class StudyTypeViewController: UIViewController {
     var dataClass:TimeTablesData!
 
+    @IBOutlet weak var recapLabel: UILabel!
+    
+    @IBOutlet weak var learnNewLabel: UILabel!
+    
+    @IBOutlet weak var practiceAllLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(dataClass.choosenTimesTable)
-        // Do any additional setup after loading the view.
+       
+        var practiceTests = dataClass.getPracticeTestsAsString()
+        for test in practiceTests
+        {
+            println(test)
+        }
+        println("recap tests")
+        var recapTests = dataClass.getRecapTestsAsString()
+        for test in recapTests
+        {
+            println(test)
+        }
+        recapLabel.text = dataClass.getTestsAsString(dataClass.getRecapTestsAsString())
+        learnNewLabel.text = dataClass.getTestsAsString(dataClass.getPracticeTestsAsString())
+        practiceAllLabel.text = dataClass.getTestsAsString(dataClass.getAllTestsAsString())
     }
 
     override func didReceiveMemoryWarning() {
