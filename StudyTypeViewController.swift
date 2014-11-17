@@ -20,17 +20,6 @@ class StudyTypeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        var practiceTests = dataClass.getPracticeTestsAsString()
-        for test in practiceTests
-        {
-            println(test)
-        }
-        println("recap tests")
-        var recapTests = dataClass.getRecapTestsAsString()
-        for test in recapTests
-        {
-            println(test)
-        }
         recapLabel.text = dataClass.getTestsAsString(dataClass.getRecapTestsAsString())
         learnNewLabel.text = dataClass.getTestsAsString(dataClass.getPracticeTestsAsString())
         practiceAllLabel.text = dataClass.getTestsAsString(dataClass.getAllTestsAsString())
@@ -42,25 +31,10 @@ class StudyTypeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        println("in prepareForSegue StudyTypeViewController")
         var practiceViewController: PracticeViewController = segue.destinationViewController as PracticeViewController
-        println("in prepareForSegue StudyTypeViewController2")
         if let button = sender as? UIButton {
-            println("in prepareForSegue StudyTypeViewController3")
-            println(button.titleLabel?.text)
             var studyType = StudyTypeEnum.getEnumByName(button.titleLabel!.text!)
             dataClass.studyType = studyType
         }

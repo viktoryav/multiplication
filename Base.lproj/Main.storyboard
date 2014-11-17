@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Multiplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainController" id="vXZ-lx-hvc" customClass="ViewController" customModule="Multiplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -229,6 +229,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gHa-RP-XQa" kind="show" identifier="firstLevelRecap" id="gJF-ee-4t1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beM-7A-lZR">
                                 <rect key="frame" x="217" y="349" width="46" height="48"/>
@@ -291,7 +294,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="g2M-2B-nu5"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Beu-fJ-CBs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZa-14-nRd">
@@ -303,7 +306,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="elevenToChooseMMethod" id="H8h-DR-ck9"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="DF4-4j-tml"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtn-xL-N5d">
@@ -315,7 +318,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="Lxp-Ow-cLo"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="5zu-OP-1I8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Which time table do you want to learn?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swc-i4-DMG">
@@ -333,7 +336,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="twoToChooseMMethod" id="cd3-Bc-Rf2"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="YNr-Sg-F8n"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp4-w5-Kj3">
@@ -345,7 +348,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="threeToChooseMMethod" id="Zia-gL-V6q"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="cqf-C9-hgC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Has-qA-Hes">
@@ -357,7 +360,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="lNy-00-Ebi"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="LTd-PF-RsH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzR-M5-fZs">
@@ -369,7 +372,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="TnK-Ht-BuU"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="YpC-89-jDa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhs-GK-G3o">
@@ -381,7 +384,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="A71-JD-3NC"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Mqx-gV-eks"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-UR-mnR">
@@ -393,7 +396,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="w8n-Ft-i3b"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Tsv-89-rdk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp5-ch-lcq">
@@ -405,7 +408,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="BeI-qZ-Xpg"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="OSa-hA-7OB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-md-JZd">
@@ -417,7 +420,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" id="mNG-IU-0cD"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="QCT-sN-gDW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ke-su-rSr">
@@ -429,7 +432,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="oneToChooseMMethod" id="5gL-cX-pLK"/>
+                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="JYu-ph-HVD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uks-sO-Gwc">
@@ -565,6 +568,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="15228172.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="d0j-uF-uU1">
                                 <rect key="frame" x="0.0" y="0.0" width="331" height="305"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-PD-TZG">
+                                <rect key="frame" x="178" y="202" width="14" height="29"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-0T-zwD">
+                                <rect key="frame" x="160" y="202" width="23" height="29"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.25565041472062983" blue="0.24743739581512225" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQD-Cf-dof">
+                                <rect key="frame" x="98" y="202" width="27" height="29"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvp-NX-Vfs">
                                 <rect key="frame" x="29" y="295" width="46" height="42"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -698,9 +719,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Well done!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSn-O2-o7c">
-                                <rect key="frame" x="128" y="72" width="113" height="28"/>
+                                <rect key="frame" x="135" y="72" width="113" height="28"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="V" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXo-3X-8a1">
+                                <rect key="frame" x="82" y="202" width="23" height="29"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" red="0.34661796659999999" green="0.95686274510000002" blue="0.65864624270000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJD-Gw-oJE">
+                                <rect key="frame" x="109" y="72" width="23" height="29"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.25565041469999999" blue="0.24743739579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -710,9 +743,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="correctLabel" destination="OQD-Cf-dof" id="jsQ-ba-VFp"/>
                         <outlet property="eight" destination="WCv-9f-ntj" id="0b6-mp-NKV"/>
                         <outlet property="five" destination="v9O-Y6-ifZ" id="OxH-tF-Aa4"/>
                         <outlet property="four" destination="P8i-nL-QmV" id="mRI-Nj-6Lc"/>
+                        <outlet property="incorrectLabel" destination="HXR-PD-TZG" id="cUw-H4-jC2"/>
+                        <outlet property="incorrectResultLabel" destination="XJD-Gw-oJE" id="Bal-SF-Gzb"/>
                         <outlet property="labelAnswer" destination="Us6-kL-46P" id="bWE-nx-4Ut"/>
                         <outlet property="labelTest" destination="i01-PP-Cqz" id="ODp-OZ-TMC"/>
                         <outlet property="nine" destination="2VK-ag-ybx" id="gwu-ru-Xns"/>
@@ -744,17 +780,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="canstockphoto16058687.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-jN-i4Z">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUc-tq-pF7">
-                                <rect key="frame" x="118" y="459" width="121" height="48"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <state key="normal" title="Home">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="goHomeFromResults" id="tAc-Eh-CiI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYZ-D6-UhU">
                                 <rect key="frame" x="51" y="373" width="249" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
@@ -763,7 +788,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gHa-RP-XQa" kind="show" identifier="changeTimeTable" id="f6d-JN-2p8"/>
+                                    <segue destination="gHa-RP-XQa" kind="show" identifier="toChangeTimeTable" id="f6d-JN-2p8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jE7-SF-QWa">
@@ -774,28 +799,42 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="playAgain" id="SPE-d5-8X0"/>
+                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="toPlayAgain" id="SPE-d5-8X0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've done 15 from 20 right" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVw-dc-Etf">
                                 <rect key="frame" x="16" y="84" width="288" height="101"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.34661796659999999" green="0.95686274510000002" blue="0.65864624270000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Great job!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-9j-cK0">
                                 <rect key="frame" x="101" y="28" width="118" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.34661796659999999" green="0.95686274510000002" blue="0.65864624270000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFh-26-DGR">
-                                <rect key="frame" x="110" y="291" width="137" height="48"/>
+                                <rect key="frame" x="110" y="291" width="148" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <state key="normal" title="Divide Now!">
+                                <state key="normal" title="Multiply Now!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="toDivideNow" id="dbe-ol-Wfz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUc-tq-pF7">
+                                <rect key="frame" x="115" y="435" width="121" height="48"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="toHomeFromR" id="tAc-Eh-CiI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -803,6 +842,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="changeCalculationTypeButton" destination="mFh-26-DGR" id="QN2-XE-DZk"/>
+                        <outlet property="resultLabel" destination="LVw-dc-Etf" id="Mht-fC-26x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imB-ic-BgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -833,10 +876,10 @@
         <image name="canstockphoto16058687.jpg" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tAc-Eh-CiI"/>
-        <segue reference="f6d-JN-2p8"/>
-        <segue reference="SPE-d5-8X0"/>
         <segue reference="7J5-Ni-22w"/>
+        <segue reference="dbe-ol-Wfz"/>
+        <segue reference="f6d-JN-2p8"/>
+        <segue reference="tAc-Eh-CiI"/>
         <segue reference="zxu-qM-0PC"/>
     </inferredMetricsTieBreakers>
 </document>
