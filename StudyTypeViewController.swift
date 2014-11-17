@@ -33,12 +33,21 @@ class StudyTypeViewController: UIViewController {
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var practiceViewController: PracticeViewController = segue.destinationViewController as PracticeViewController
-        if let button = sender as? UIButton {
-            var studyType = StudyTypeEnum.getEnumByName(button.titleLabel!.text!)
-            dataClass.studyType = studyType
+        if(segue.identifier == "backToChoose")
+        {
+            var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
+            multiplicationChooseViewController.dataClass=dataClass
         }
-        practiceViewController.dataClass=dataClass
+        else
+        {
+            var practiceViewController: PracticeViewController = segue.destinationViewController as PracticeViewController
+            if let button = sender as? UIButton {
+                var studyType = StudyTypeEnum.getEnumByName(button.titleLabel!.text!)
+                dataClass.studyType = studyType
+            }
+            practiceViewController.dataClass=dataClass
+        }
+        
     }
 
 }

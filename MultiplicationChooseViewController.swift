@@ -119,5 +119,15 @@ class MultiplicationChooseViewController: UIViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "backToTimeTables")
+        {
+            var multiplicationViewController: MultiplicationViewController = segue.destinationViewController as MultiplicationViewController
+            multiplicationViewController.dataClass=dataClass
+        }
+        
+    }
+
+    
 
 }
