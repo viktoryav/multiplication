@@ -34,13 +34,15 @@ class PracticeViewController: UIViewController {
     var currentAnswer:Int!
     var correctAnswers = 0
     var incorrectAnswers = 0
+    var timer:NSTimer?
     
     
     override func viewDidLoad() {
         println("in PracticeViewController")
         super.viewDidLoad()
         println(dataClass.studyType)
-        var timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
+        
         tests = dataClass.getTestsForPracticeAsInt()
         var label = getNextTest()
         labelTest.text=label
@@ -161,6 +163,7 @@ class PracticeViewController: UIViewController {
             resultsViewController.allAnswers = correctAnswers + incorrectAnswers
         } else if (segue.identifier=="backToST")
         {
+            timer?.invalidate()
             var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
             studyTypeViewController.dataClass=dataClass
         }
