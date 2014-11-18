@@ -498,17 +498,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="canstockphoto16058687.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wSV-1O-1CP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-2x-Wh0">
-                                <rect key="frame" x="87" y="280" width="147" height="48"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <state key="normal" title="Practice All">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dxO-7M-uSz" kind="show" identifier="practiceAllToPractice" id="7J5-Ni-22w"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl7-qE-eB6">
                                 <rect key="frame" x="89" y="165" width="142" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
@@ -560,6 +549,17 @@
                                     <segue destination="gHa-RP-XQa" kind="show" identifier="backToChoose" id="mWU-PV-0uz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-2x-Wh0">
+                                <rect key="frame" x="87" y="280" width="147" height="48"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <state key="normal" title="Practice All">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dxO-7M-uSz" kind="show" identifier="practiceAllToPractice" id="7J5-Ni-22w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -568,7 +568,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="learnNewLabel" destination="Kjl-2s-B3x" id="kjU-sg-wBf"/>
+                        <outlet property="practiceAllButton" destination="zOQ-2x-Wh0" id="r3c-VF-1xQ"/>
                         <outlet property="practiceAllLabel" destination="poN-WI-UQC" id="rGq-ga-TbC"/>
+                        <outlet property="recapButton" destination="eni-Lj-nzG" id="y6V-Nd-j0v"/>
                         <outlet property="recapLabel" destination="Dr3-nV-Ych" id="l0e-gF-LCh"/>
                     </connections>
                 </viewController>
@@ -827,7 +829,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jE7-SF-QWa">
-                                <rect key="frame" x="100" y="204" width="121" height="48"/>
+                                <rect key="frame" x="81" y="205" width="159" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                 <state key="normal" title="Play Again!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -872,7 +874,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFh-26-DGR">
-                                <rect key="frame" x="86" y="281" width="148" height="48"/>
+                                <rect key="frame" x="70" y="281" width="180" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                 <state key="normal" title="Multiply Now!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -922,10 +924,10 @@
         <image name="canstockphoto16058687.jpg" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LbE-pJ-C9G"/>
-        <segue reference="gJF-ee-4t1"/>
-        <segue reference="EH0-W0-GDn"/>
-        <segue reference="pcd-3M-vPq"/>
         <segue reference="9YS-k0-Ggf"/>
+        <segue reference="dbe-ol-Wfz"/>
+        <segue reference="f6d-JN-2p8"/>
+        <segue reference="tAc-Eh-CiI"/>
+        <segue reference="EH0-W0-GDn"/>
     </inferredMetricsTieBreakers>
 </document>

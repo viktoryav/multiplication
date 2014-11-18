@@ -130,6 +130,7 @@ class MultiplicationChooseViewController: UIViewController {
         else if(segue.identifier == "backToTimeTables")
         {
             var multiplicationViewController: MultiplicationViewController = segue.destinationViewController as MultiplicationViewController
+            dataClass.cleanKnownTimeTables()
             multiplicationViewController.dataClass=dataClass
         }
     }

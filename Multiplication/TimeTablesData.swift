@@ -42,6 +42,16 @@ class TimeTablesData {
         numberButtons = [String:UIButton]()
     }
     
+    func cleanKnownTimeTables()
+    {
+        knownTimeTables = [Int]()
+    }
+    
+    func cleanChoosenTimeTable()
+    {
+        choosenTimesTable = nil
+    }
+    
     func initTimeTables()
     {
         allTimeTablesInt.append(one)

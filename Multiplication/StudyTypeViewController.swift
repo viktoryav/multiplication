@@ -16,13 +16,25 @@ class StudyTypeViewController: UIViewController {
     @IBOutlet weak var learnNewLabel: UILabel!
     
     @IBOutlet weak var practiceAllLabel: UILabel!
+    @IBOutlet weak var recapButton: UIButton!
     
+    @IBOutlet weak var practiceAllButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        recapLabel.text = dataClass.getTestsAsString(dataClass.getRecapTestsAsString())
+        if(dataClass.knownTimeTables.count==0)
+        {
+            recapLabel.hidden = true
+            practiceAllLabel.hidden = true
+            practiceAllButton.hidden = true
+            recapButton.hidden = true
+        }
+        else
+        {
+            recapLabel.text = dataClass.getTestsAsString(dataClass.getRecapTestsAsString())
+            practiceAllLabel.text = dataClass.getTestsAsString(dataClass.getAllTestsAsString())
+        }
         learnNewLabel.text = dataClass.getTestsAsString(dataClass.getPracticeTestsAsString())
-        practiceAllLabel.text = dataClass.getTestsAsString(dataClass.getAllTestsAsString())
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +48,7 @@ class StudyTypeViewController: UIViewController {
         if(segue.identifier == "backToChoose")
         {
             var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
+            dataClass.cleanChoosenTimeTable()
             multiplicationChooseViewController.dataClass=dataClass
         }
         else

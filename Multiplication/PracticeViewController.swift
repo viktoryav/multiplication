@@ -40,7 +40,7 @@ class PracticeViewController: UIViewController {
         println("in PracticeViewController")
         super.viewDidLoad()
         println(dataClass.studyType)
-        var timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
         tests = dataClass.getTestsForPracticeAsInt()
         var label = getNextTest()
         labelTest.text=label
