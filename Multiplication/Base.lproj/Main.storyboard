@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rb9-zl-bmO">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -348,6 +347,7 @@
                                 </state>
                                 <connections>
                                     <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="YNr-Sg-F8n"/>
+                                    <segue destination="dxO-7M-uSz" kind="show" identifier="navigateToP" id="3zW-OT-Lqj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp4-w5-Kj3">
@@ -811,7 +811,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2N0-Xu-190" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679" y="738"/>
+            <point key="canvasLocation" x="2158" y="-84"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="d1V-9d-gsa">
@@ -924,10 +924,10 @@
         <image name="canstockphoto16058687.jpg" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9YS-k0-Ggf"/>
-        <segue reference="dbe-ol-Wfz"/>
-        <segue reference="f6d-JN-2p8"/>
+        <segue reference="3zW-OT-Lqj"/>
+        <segue reference="mWU-PV-0uz"/>
+        <segue reference="LbE-pJ-C9G"/>
+        <segue reference="iwT-md-krG"/>
         <segue reference="tAc-Eh-CiI"/>
-        <segue reference="EH0-W0-GDn"/>
     </inferredMetricsTieBreakers>
 </document>
