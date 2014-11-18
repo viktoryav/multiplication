@@ -57,12 +57,7 @@ class PracticeViewController: UIViewController {
     
     func finish()
     {
-        println("Timer has finished")
-        let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("resultsView")
-        (viewController as ResultsViewController).dataClass = dataClass
-        (viewController as ResultsViewController).correctAnswers = correctAnswers
-        (viewController as ResultsViewController).allAnswers=correctAnswers + incorrectAnswers
-        self.showViewController(viewController as UIViewController, sender: viewController)
+        performSegueWithIdentifier("navigateToResults", sender: self)
     }
     
 
@@ -155,6 +150,20 @@ class PracticeViewController: UIViewController {
             currentAnswer = currentTest
         }
         return testStr
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier=="navigateToResults")
+        {
+            var resultsViewController: ResultsViewController = segue.destinationViewController as ResultsViewController
+            resultsViewController.dataClass=dataClass
+            resultsViewController.correctAnswers = correctAnswers
+            resultsViewController.allAnswers = correctAnswers + incorrectAnswers
+        } else if (segue.identifier=="backToST")
+        {
+            var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
+            studyTypeViewController.dataClass=dataClass
+        }
     }
 
 }

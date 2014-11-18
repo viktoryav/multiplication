@@ -74,6 +74,8 @@ class MultiplicationViewController: UIViewController {
             var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
             dataClass.firstLevelStudyType = StudyTypeEnum.RECAP
             multiplicationChooseViewController.dataClass=dataClass
+        }else if segue.identifier == "backToCT"{
+            var viewController:ViewController = segue.destinationViewController as ViewController
         }
         
     }

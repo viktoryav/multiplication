@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1B8DA81A1B9AA600F909CE /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B8DA71A1B9AA600F909CE /* ResultsViewController.swift */; };
 		3C39EC1B1A10AED4005B6461 /* TimeTablesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39EC1A1A10AED4005B6461 /* TimeTablesData.swift */; };
 		3C39EC1D1A10BFC2005B6461 /* MultiplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39EC1C1A10BFC2005B6461 /* MultiplicationViewController.swift */; };
 		3C39EC211A10CC54005B6461 /* MultiplicationChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39EC201A10CC54005B6461 /* MultiplicationChooseViewController.swift */; };
 		3C7066AE1A120F380019D9E2 /* StudyTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7066AD1A120F380019D9E2 /* StudyTypeEnum.swift */; };
-		3C8A669C1A1B4A7100D19A5F /* BoolConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A669B1A1B4A7100D19A5F /* BoolConvert.swift */; };
 		3CA065D11A10F65900301DB4 /* StudyTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA065D01A10F65900301DB4 /* StudyTypeViewController.swift */; };
 		3CA065D31A10F73300301DB4 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA065D21A10F73300301DB4 /* PracticeViewController.swift */; };
 		3CA065D51A1104F900301DB4 /* CalculationTypesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA065D41A1104F900301DB4 /* CalculationTypesEnum.swift */; };
@@ -44,8 +44,6 @@
 		3CB3AC6D1A0E477200EB2D95 /* 15228172.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC6A1A0E477200EB2D95 /* 15228172.jpg */; };
 		3CB3AC6E1A0E477200EB2D95 /* 15228172.eps in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC6B1A0E477200EB2D95 /* 15228172.eps */; };
 		3CB3AC6F1A0E477200EB2D95 /* canstockphoto16058687.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC6C1A0E477200EB2D95 /* canstockphoto16058687.jpg */; };
-		3CDDD8711A1B5342007A5625 /* NilConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDD8701A1B5342007A5625 /* NilConvert.swift */; };
-		3CF721AD1A14F461000447E9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF721AC1A14F461000447E9 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C1B8DA71A1B9AA600F909CE /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		3C39EC1A1A10AED4005B6461 /* TimeTablesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablesData.swift; sourceTree = "<group>"; };
 		3C39EC1C1A10BFC2005B6461 /* MultiplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplicationViewController.swift; sourceTree = "<group>"; };
 		3C39EC201A10CC54005B6461 /* MultiplicationChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplicationChooseViewController.swift; sourceTree = "<group>"; };
 		3C7066AD1A120F380019D9E2 /* StudyTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTypeEnum.swift; sourceTree = "<group>"; };
-		3C8A669B1A1B4A7100D19A5F /* BoolConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolConvert.swift; sourceTree = "<group>"; };
 		3CA065D01A10F65900301DB4 /* StudyTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTypeViewController.swift; sourceTree = "<group>"; };
 		3CA065D21A10F73300301DB4 /* PracticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		3CA065D41A1104F900301DB4 /* CalculationTypesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationTypesEnum.swift; sourceTree = "<group>"; };
@@ -102,9 +100,6 @@
 		3CB3AC6A1A0E477200EB2D95 /* 15228172.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15228172.jpg; sourceTree = "<group>"; };
 		3CB3AC6B1A0E477200EB2D95 /* 15228172.eps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 15228172.eps; sourceTree = "<group>"; };
 		3CB3AC6C1A0E477200EB2D95 /* canstockphoto16058687.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = canstockphoto16058687.jpg; sourceTree = "<group>"; };
-		3CDDD8701A1B5342007A5625 /* NilConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NilConvert.swift; sourceTree = "<group>"; };
-		3CF4D8351A1AACCE00100827 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
-		3CF721AC1A14F461000447E9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = ../ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +150,7 @@
 				3C39EC201A10CC54005B6461 /* MultiplicationChooseViewController.swift */,
 				3CA065D01A10F65900301DB4 /* StudyTypeViewController.swift */,
 				3CA065D21A10F73300301DB4 /* PracticeViewController.swift */,
-				3CF721AC1A14F461000447E9 /* ResultsViewController.swift */,
+				3C1B8DA71A1B9AA600F909CE /* ResultsViewController.swift */,
 				3C39EC1A1A10AED4005B6461 /* TimeTablesData.swift */,
 				3CB3AC031A0E451F00EB2D95 /* Main.storyboard */,
 				3CB3AC061A0E451F00EB2D95 /* Images.xcassets */,
@@ -163,9 +158,6 @@
 				3CB3ABFD1A0E451F00EB2D95 /* Supporting Files */,
 				3CA065D41A1104F900301DB4 /* CalculationTypesEnum.swift */,
 				3C7066AD1A120F380019D9E2 /* StudyTypeEnum.swift */,
-				3CF4D8351A1AACCE00100827 /* MyPlayground.playground */,
-				3C8A669B1A1B4A7100D19A5F /* BoolConvert.swift */,
-				3CDDD8701A1B5342007A5625 /* NilConvert.swift */,
 			);
 			path = Multiplication;
 			sourceTree = "<group>";
@@ -352,15 +344,13 @@
 				3CA065D51A1104F900301DB4 /* CalculationTypesEnum.swift in Sources */,
 				3CA065D31A10F73300301DB4 /* PracticeViewController.swift in Sources */,
 				3C39EC1B1A10AED4005B6461 /* TimeTablesData.swift in Sources */,
-				3CF721AD1A14F461000447E9 /* ResultsViewController.swift in Sources */,
 				3CA065D11A10F65900301DB4 /* StudyTypeViewController.swift in Sources */,
 				3CB3AC021A0E451F00EB2D95 /* ViewController.swift in Sources */,
 				3C39EC1D1A10BFC2005B6461 /* MultiplicationViewController.swift in Sources */,
-				3CDDD8711A1B5342007A5625 /* NilConvert.swift in Sources */,
 				3CB3AC001A0E451F00EB2D95 /* AppDelegate.swift in Sources */,
 				3C7066AE1A120F380019D9E2 /* StudyTypeEnum.swift in Sources */,
-				3C8A669C1A1B4A7100D19A5F /* BoolConvert.swift in Sources */,
 				3C39EC211A10CC54005B6461 /* MultiplicationChooseViewController.swift in Sources */,
+				3C1B8DA81A1B9AA600F909CE /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

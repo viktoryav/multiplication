@@ -107,43 +107,31 @@ class MultiplicationChooseViewController: UIViewController {
         println(sender.titleLabel?.text)
         if(dataClass.firstLevelStudyType == StudyTypeEnum.LEARN_NEW)
         {
-            println("in learn new")
-            let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("studyType")
-            //let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("studyType")
-            println("in learn new 1")
-            (viewController as StudyTypeViewController).dataClass = dataClass
-            println("in learn new 2")
-            //self.showViewController(viewController as UIViewController, sender: viewController)
-            //let t: BooleanLiteralConvertible = true;
-            //self.presentViewController(viewController, animated: true, completion: nil)
-            //self.presentViewController(viewController, animated: true, completion: nil)
-            //if (self.respondsToSelector:Selector("showViewController"))
-            //{
-                self.showViewController(viewController as UIViewController, sender: viewController)
-            //}
-            println("in learn new 3")
+            performSegueWithIdentifier("navigateToST", sender: sender)
         }
         else
         {
-            println("in else")
-            let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("practice")
-            println("in else 1")
-            dataClass.studyType = StudyTypeEnum.PRACTICE_ALL
-            println("in else 2")
-            (viewController as PracticeViewController).dataClass = dataClass
-            println("in else 3")
-            self.showViewController(viewController as UIViewController, sender: viewController)
-            println("in else 4")
+            performSegueWithIdentifier("navigateToP", sender: sender)
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "backToTimeTables")
+        if(segue.identifier=="navigateToST")
+        {
+            var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
+            studyTypeViewController.dataClass=dataClass
+        }
+        else if(segue.identifier=="navigateToP")
+        {
+            dataClass.studyType = StudyTypeEnum.PRACTICE_ALL
+            var practiceViewController: PracticeViewController = segue.destinationViewController as PracticeViewController
+            practiceViewController.dataClass=dataClass
+        }
+        else if(segue.identifier == "backToTimeTables")
         {
             var multiplicationViewController: MultiplicationViewController = segue.destinationViewController as MultiplicationViewController
             multiplicationViewController.dataClass=dataClass
         }
-        
     }
 
     
