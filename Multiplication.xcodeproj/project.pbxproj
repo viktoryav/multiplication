@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C39EC1B1A10AED4005B6461 /* TimeTablesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39EC1A1A10AED4005B6461 /* TimeTablesData.swift */; };
+		3C39EC1D1A10BFC2005B6461 /* MultiplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39EC1C1A10BFC2005B6461 /* MultiplicationViewController.swift */; };
+		3C39EC211A10CC54005B6461 /* MultiplicationChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C39EC201A10CC54005B6461 /* MultiplicationChooseViewController.swift */; };
+		3C7066AE1A120F380019D9E2 /* StudyTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7066AD1A120F380019D9E2 /* StudyTypeEnum.swift */; };
+		3C8A669C1A1B4A7100D19A5F /* BoolConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A669B1A1B4A7100D19A5F /* BoolConvert.swift */; };
+		3CA065D11A10F65900301DB4 /* StudyTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA065D01A10F65900301DB4 /* StudyTypeViewController.swift */; };
+		3CA065D31A10F73300301DB4 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA065D21A10F73300301DB4 /* PracticeViewController.swift */; };
+		3CA065D51A1104F900301DB4 /* CalculationTypesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA065D41A1104F900301DB4 /* CalculationTypesEnum.swift */; };
+		3CB3AC001A0E451F00EB2D95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3ABFF1A0E451F00EB2D95 /* AppDelegate.swift */; };
+		3CB3AC021A0E451F00EB2D95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3AC011A0E451F00EB2D95 /* ViewController.swift */; };
+		3CB3AC051A0E451F00EB2D95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC031A0E451F00EB2D95 /* Main.storyboard */; };
+		3CB3AC071A0E451F00EB2D95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC061A0E451F00EB2D95 /* Images.xcassets */; };
+		3CB3AC0A1A0E451F00EB2D95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC081A0E451F00EB2D95 /* LaunchScreen.xib */; };
+		3CB3AC161A0E451F00EB2D95 /* MultiplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3AC151A0E451F00EB2D95 /* MultiplicationTests.swift */; };
+		3CB3AC451A0E471F00EB2D95 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC421A0E471F00EB2D95 /* Default-568h@2x.png */; };
+		3CB3AC461A0E471F00EB2D95 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC431A0E471F00EB2D95 /* Default.png */; };
+		3CB3AC471A0E471F00EB2D95 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC441A0E471F00EB2D95 /* Default@2x.png */; };
+		3CB3AC591A0E474F00EB2D95 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC481A0E474F00EB2D95 /* Icon-40.png */; };
+		3CB3AC5A1A0E474F00EB2D95 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC491A0E474F00EB2D95 /* Icon-40@2x.png */; };
+		3CB3AC5B1A0E474F00EB2D95 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC4A1A0E474F00EB2D95 /* Icon-40@3x.png */; };
+		3CB3AC5C1A0E474F00EB2D95 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC4B1A0E474F00EB2D95 /* Icon-60@2x.png */; };
+		3CB3AC5D1A0E474F00EB2D95 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC4C1A0E474F00EB2D95 /* Icon-60@3x.png */; };
+		3CB3AC5E1A0E474F00EB2D95 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC4D1A0E474F00EB2D95 /* Icon-72.png */; };
+		3CB3AC5F1A0E474F00EB2D95 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC4E1A0E474F00EB2D95 /* Icon-72@2x.png */; };
+		3CB3AC601A0E474F00EB2D95 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC4F1A0E474F00EB2D95 /* Icon-76.png */; };
+		3CB3AC611A0E474F00EB2D95 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC501A0E474F00EB2D95 /* Icon-76@2x.png */; };
+		3CB3AC621A0E474F00EB2D95 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC511A0E474F00EB2D95 /* Icon-120.png */; };
+		3CB3AC631A0E474F00EB2D95 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC521A0E474F00EB2D95 /* Icon-Small-50.png */; };
+		3CB3AC641A0E474F00EB2D95 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC531A0E474F00EB2D95 /* Icon-Small-50@2x.png */; };
+		3CB3AC651A0E474F00EB2D95 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC541A0E474F00EB2D95 /* Icon-Small.png */; };
+		3CB3AC661A0E474F00EB2D95 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC551A0E474F00EB2D95 /* Icon-Small@2x.png */; };
+		3CB3AC671A0E474F00EB2D95 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC561A0E474F00EB2D95 /* Icon-Small@3x.png */; };
+		3CB3AC681A0E474F00EB2D95 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC571A0E474F00EB2D95 /* Icon.png */; };
+		3CB3AC691A0E474F00EB2D95 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC581A0E474F00EB2D95 /* Icon@2x.png */; };
+		3CB3AC6D1A0E477200EB2D95 /* 15228172.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC6A1A0E477200EB2D95 /* 15228172.jpg */; };
+		3CB3AC6E1A0E477200EB2D95 /* 15228172.eps in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC6B1A0E477200EB2D95 /* 15228172.eps */; };
+		3CB3AC6F1A0E477200EB2D95 /* canstockphoto16058687.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CB3AC6C1A0E477200EB2D95 /* canstockphoto16058687.jpg */; };
+		3CDDD8711A1B5342007A5625 /* NilConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDD8701A1B5342007A5625 /* NilConvert.swift */; };
+		3CF721AD1A14F461000447E9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF721AC1A14F461000447E9 /* ResultsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CB3AC101A0E451F00EB2D95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB3ABF21A0E451F00EB2D95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB3ABF91A0E451F00EB2D95;
+			remoteInfo = Multiplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C39EC1A1A10AED4005B6461 /* TimeTablesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablesData.swift; sourceTree = "<group>"; };
+		3C39EC1C1A10BFC2005B6461 /* MultiplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplicationViewController.swift; sourceTree = "<group>"; };
+		3C39EC201A10CC54005B6461 /* MultiplicationChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplicationChooseViewController.swift; sourceTree = "<group>"; };
+		3C7066AD1A120F380019D9E2 /* StudyTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTypeEnum.swift; sourceTree = "<group>"; };
+		3C8A669B1A1B4A7100D19A5F /* BoolConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolConvert.swift; sourceTree = "<group>"; };
+		3CA065D01A10F65900301DB4 /* StudyTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTypeViewController.swift; sourceTree = "<group>"; };
+		3CA065D21A10F73300301DB4 /* PracticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		3CA065D41A1104F900301DB4 /* CalculationTypesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationTypesEnum.swift; sourceTree = "<group>"; };
+		3CA065D61A110EED00301DB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3CA065D81A110EF700301DB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3CB3ABFA1A0E451F00EB2D95 /* Multiplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multiplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB3ABFE1A0E451F00EB2D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB3ABFF1A0E451F00EB2D95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CB3AC011A0E451F00EB2D95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CB3AC041A0E451F00EB2D95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CB3AC061A0E451F00EB2D95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3CB3AC091A0E451F00EB2D95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3CB3AC0F1A0E451F00EB2D95 /* MultiplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB3AC141A0E451F00EB2D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB3AC151A0E451F00EB2D95 /* MultiplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationTests.swift; sourceTree = "<group>"; };
+		3CB3AC421A0E471F00EB2D95 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3CB3AC431A0E471F00EB2D95 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3CB3AC441A0E471F00EB2D95 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3CB3AC481A0E474F00EB2D95 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		3CB3AC491A0E474F00EB2D95 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		3CB3AC4A1A0E474F00EB2D95 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		3CB3AC4B1A0E474F00EB2D95 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		3CB3AC4C1A0E474F00EB2D95 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		3CB3AC4D1A0E474F00EB2D95 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		3CB3AC4E1A0E474F00EB2D95 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		3CB3AC4F1A0E474F00EB2D95 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		3CB3AC501A0E474F00EB2D95 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		3CB3AC511A0E474F00EB2D95 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		3CB3AC521A0E474F00EB2D95 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		3CB3AC531A0E474F00EB2D95 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		3CB3AC541A0E474F00EB2D95 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		3CB3AC551A0E474F00EB2D95 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		3CB3AC561A0E474F00EB2D95 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		3CB3AC571A0E474F00EB2D95 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3CB3AC581A0E474F00EB2D95 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3CB3AC6A1A0E477200EB2D95 /* 15228172.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15228172.jpg; sourceTree = "<group>"; };
+		3CB3AC6B1A0E477200EB2D95 /* 15228172.eps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 15228172.eps; sourceTree = "<group>"; };
+		3CB3AC6C1A0E477200EB2D95 /* canstockphoto16058687.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = canstockphoto16058687.jpg; sourceTree = "<group>"; };
+		3CDDD8701A1B5342007A5625 /* NilConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NilConvert.swift; sourceTree = "<group>"; };
+		3CF4D8351A1AACCE00100827 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		3CF721AC1A14F461000447E9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = ../ResultsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CB3ABF71A0E451F00EB2D95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB3AC0C1A0E451F00EB2D95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CB3ABF11A0E451F00EB2D95 = {
+			isa = PBXGroup;
+			children = (
+				3CA065D81A110EF700301DB4 /* Foundation.framework */,
+				3CA065D61A110EED00301DB4 /* UIKit.framework */,
+				3CB3ABFC1A0E451F00EB2D95 /* Multiplication */,
+				3CB3AC121A0E451F00EB2D95 /* MultiplicationTests */,
+				3CB3ABFB1A0E451F00EB2D95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CB3ABFB1A0E451F00EB2D95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CB3ABFA1A0E451F00EB2D95 /* Multiplication.app */,
+				3CB3AC0F1A0E451F00EB2D95 /* MultiplicationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CB3ABFC1A0E451F00EB2D95 /* Multiplication */ = {
+			isa = PBXGroup;
+			children = (
+				3CB3AC411A0E471F00EB2D95 /* images */,
+				3CB3ABFF1A0E451F00EB2D95 /* AppDelegate.swift */,
+				3CB3AC011A0E451F00EB2D95 /* ViewController.swift */,
+				3C39EC1C1A10BFC2005B6461 /* MultiplicationViewController.swift */,
+				3C39EC201A10CC54005B6461 /* MultiplicationChooseViewController.swift */,
+				3CA065D01A10F65900301DB4 /* StudyTypeViewController.swift */,
+				3CA065D21A10F73300301DB4 /* PracticeViewController.swift */,
+				3CF721AC1A14F461000447E9 /* ResultsViewController.swift */,
+				3C39EC1A1A10AED4005B6461 /* TimeTablesData.swift */,
+				3CB3AC031A0E451F00EB2D95 /* Main.storyboard */,
+				3CB3AC061A0E451F00EB2D95 /* Images.xcassets */,
+				3CB3AC081A0E451F00EB2D95 /* LaunchScreen.xib */,
+				3CB3ABFD1A0E451F00EB2D95 /* Supporting Files */,
+				3CA065D41A1104F900301DB4 /* CalculationTypesEnum.swift */,
+				3C7066AD1A120F380019D9E2 /* StudyTypeEnum.swift */,
+				3CF4D8351A1AACCE00100827 /* MyPlayground.playground */,
+				3C8A669B1A1B4A7100D19A5F /* BoolConvert.swift */,
+				3CDDD8701A1B5342007A5625 /* NilConvert.swift */,
+			);
+			path = Multiplication;
+			sourceTree = "<group>";
+		};
+		3CB3ABFD1A0E451F00EB2D95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CB3ABFE1A0E451F00EB2D95 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CB3AC121A0E451F00EB2D95 /* MultiplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CB3AC151A0E451F00EB2D95 /* MultiplicationTests.swift */,
+				3CB3AC131A0E451F00EB2D95 /* Supporting Files */,
+			);
+			path = MultiplicationTests;
+			sourceTree = "<group>";
+		};
+		3CB3AC131A0E451F00EB2D95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CB3AC141A0E451F00EB2D95 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CB3AC411A0E471F00EB2D95 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3CB3AC6A1A0E477200EB2D95 /* 15228172.jpg */,
+				3CB3AC6B1A0E477200EB2D95 /* 15228172.eps */,
+				3CB3AC6C1A0E477200EB2D95 /* canstockphoto16058687.jpg */,
+				3CB3AC481A0E474F00EB2D95 /* Icon-40.png */,
+				3CB3AC491A0E474F00EB2D95 /* Icon-40@2x.png */,
+				3CB3AC4A1A0E474F00EB2D95 /* Icon-40@3x.png */,
+				3CB3AC4B1A0E474F00EB2D95 /* Icon-60@2x.png */,
+				3CB3AC4C1A0E474F00EB2D95 /* Icon-60@3x.png */,
+				3CB3AC4D1A0E474F00EB2D95 /* Icon-72.png */,
+				3CB3AC4E1A0E474F00EB2D95 /* Icon-72@2x.png */,
+				3CB3AC4F1A0E474F00EB2D95 /* Icon-76.png */,
+				3CB3AC501A0E474F00EB2D95 /* Icon-76@2x.png */,
+				3CB3AC511A0E474F00EB2D95 /* Icon-120.png */,
+				3CB3AC521A0E474F00EB2D95 /* Icon-Small-50.png */,
+				3CB3AC531A0E474F00EB2D95 /* Icon-Small-50@2x.png */,
+				3CB3AC541A0E474F00EB2D95 /* Icon-Small.png */,
+				3CB3AC551A0E474F00EB2D95 /* Icon-Small@2x.png */,
+				3CB3AC561A0E474F00EB2D95 /* Icon-Small@3x.png */,
+				3CB3AC571A0E474F00EB2D95 /* Icon.png */,
+				3CB3AC581A0E474F00EB2D95 /* Icon@2x.png */,
+				3CB3AC421A0E471F00EB2D95 /* Default-568h@2x.png */,
+				3CB3AC431A0E471F00EB2D95 /* Default.png */,
+				3CB3AC441A0E471F00EB2D95 /* Default@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CB3ABF91A0E451F00EB2D95 /* Multiplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB3AC191A0E451F00EB2D95 /* Build configuration list for PBXNativeTarget "Multiplication" */;
+			buildPhases = (
+				3CB3ABF61A0E451F00EB2D95 /* Sources */,
+				3CB3ABF71A0E451F00EB2D95 /* Frameworks */,
+				3CB3ABF81A0E451F00EB2D95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Multiplication;
+			productName = Multiplication;
+			productReference = 3CB3ABFA1A0E451F00EB2D95 /* Multiplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CB3AC0E1A0E451F00EB2D95 /* MultiplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB3AC1C1A0E451F00EB2D95 /* Build configuration list for PBXNativeTarget "MultiplicationTests" */;
+			buildPhases = (
+				3CB3AC0B1A0E451F00EB2D95 /* Sources */,
+				3CB3AC0C1A0E451F00EB2D95 /* Frameworks */,
+				3CB3AC0D1A0E451F00EB2D95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CB3AC111A0E451F00EB2D95 /* PBXTargetDependency */,
+			);
+			name = MultiplicationTests;
+			productName = MultiplicationTests;
+			productReference = 3CB3AC0F1A0E451F00EB2D95 /* MultiplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CB3ABF21A0E451F00EB2D95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Vika;
+				TargetAttributes = {
+					3CB3ABF91A0E451F00EB2D95 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = VJ6W4RX3PC;
+					};
+					3CB3AC0E1A0E451F00EB2D95 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 3CB3ABF91A0E451F00EB2D95;
+					};
+				};
+			};
+			buildConfigurationList = 3CB3ABF51A0E451F00EB2D95 /* Build configuration list for PBXProject "Multiplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CB3ABF11A0E451F00EB2D95;
+			productRefGroup = 3CB3ABFB1A0E451F00EB2D95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CB3ABF91A0E451F00EB2D95 /* Multiplication */,
+				3CB3AC0E1A0E451F00EB2D95 /* MultiplicationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CB3ABF81A0E451F00EB2D95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB3AC641A0E474F00EB2D95 /* Icon-Small-50@2x.png in Resources */,
+				3CB3AC471A0E471F00EB2D95 /* Default@2x.png in Resources */,
+				3CB3AC5C1A0E474F00EB2D95 /* Icon-60@2x.png in Resources */,
+				3CB3AC051A0E451F00EB2D95 /* Main.storyboard in Resources */,
+				3CB3AC601A0E474F00EB2D95 /* Icon-76.png in Resources */,
+				3CB3AC691A0E474F00EB2D95 /* Icon@2x.png in Resources */,
+				3CB3AC6E1A0E477200EB2D95 /* 15228172.eps in Resources */,
+				3CB3AC451A0E471F00EB2D95 /* Default-568h@2x.png in Resources */,
+				3CB3AC591A0E474F00EB2D95 /* Icon-40.png in Resources */,
+				3CB3AC5E1A0E474F00EB2D95 /* Icon-72.png in Resources */,
+				3CB3AC681A0E474F00EB2D95 /* Icon.png in Resources */,
+				3CB3AC5B1A0E474F00EB2D95 /* Icon-40@3x.png in Resources */,
+				3CB3AC621A0E474F00EB2D95 /* Icon-120.png in Resources */,
+				3CB3AC651A0E474F00EB2D95 /* Icon-Small.png in Resources */,
+				3CB3AC0A1A0E451F00EB2D95 /* LaunchScreen.xib in Resources */,
+				3CB3AC671A0E474F00EB2D95 /* Icon-Small@3x.png in Resources */,
+				3CB3AC5A1A0E474F00EB2D95 /* Icon-40@2x.png in Resources */,
+				3CB3AC661A0E474F00EB2D95 /* Icon-Small@2x.png in Resources */,
+				3CB3AC631A0E474F00EB2D95 /* Icon-Small-50.png in Resources */,
+				3CB3AC071A0E451F00EB2D95 /* Images.xcassets in Resources */,
+				3CB3AC461A0E471F00EB2D95 /* Default.png in Resources */,
+				3CB3AC5D1A0E474F00EB2D95 /* Icon-60@3x.png in Resources */,
+				3CB3AC611A0E474F00EB2D95 /* Icon-76@2x.png in Resources */,
+				3CB3AC6F1A0E477200EB2D95 /* canstockphoto16058687.jpg in Resources */,
+				3CB3AC5F1A0E474F00EB2D95 /* Icon-72@2x.png in Resources */,
+				3CB3AC6D1A0E477200EB2D95 /* 15228172.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB3AC0D1A0E451F00EB2D95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CB3ABF61A0E451F00EB2D95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CA065D51A1104F900301DB4 /* CalculationTypesEnum.swift in Sources */,
+				3CA065D31A10F73300301DB4 /* PracticeViewController.swift in Sources */,
+				3C39EC1B1A10AED4005B6461 /* TimeTablesData.swift in Sources */,
+				3CF721AD1A14F461000447E9 /* ResultsViewController.swift in Sources */,
+				3CA065D11A10F65900301DB4 /* StudyTypeViewController.swift in Sources */,
+				3CB3AC021A0E451F00EB2D95 /* ViewController.swift in Sources */,
+				3C39EC1D1A10BFC2005B6461 /* MultiplicationViewController.swift in Sources */,
+				3CDDD8711A1B5342007A5625 /* NilConvert.swift in Sources */,
+				3CB3AC001A0E451F00EB2D95 /* AppDelegate.swift in Sources */,
+				3C7066AE1A120F380019D9E2 /* StudyTypeEnum.swift in Sources */,
+				3C8A669C1A1B4A7100D19A5F /* BoolConvert.swift in Sources */,
+				3C39EC211A10CC54005B6461 /* MultiplicationChooseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB3AC0B1A0E451F00EB2D95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB3AC161A0E451F00EB2D95 /* MultiplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CB3AC111A0E451F00EB2D95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB3ABF91A0E451F00EB2D95 /* Multiplication */;
+			targetProxy = 3CB3AC101A0E451F00EB2D95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CB3AC031A0E451F00EB2D95 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CB3AC041A0E451F00EB2D95 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CB3AC081A0E451F00EB2D95 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CB3AC091A0E451F00EB2D95 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CB3AC171A0E451F00EB2D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3CB3AC181A0E451F00EB2D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CB3AC1A1A0E451F00EB2D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Multiplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		3CB3AC1B1A0E451F00EB2D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Multiplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		3CB3AC1D1A0E451F00EB2D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultiplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Multiplication.app/Multiplication";
+			};
+			name = Debug;
+		};
+		3CB3AC1E1A0E451F00EB2D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultiplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Multiplication.app/Multiplication";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CB3ABF51A0E451F00EB2D95 /* Build configuration list for PBXProject "Multiplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB3AC171A0E451F00EB2D95 /* Debug */,
+				3CB3AC181A0E451F00EB2D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB3AC191A0E451F00EB2D95 /* Build configuration list for PBXNativeTarget "Multiplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB3AC1A1A0E451F00EB2D95 /* Debug */,
+				3CB3AC1B1A0E451F00EB2D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB3AC1C1A0E451F00EB2D95 /* Build configuration list for PBXNativeTarget "MultiplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB3AC1D1A0E451F00EB2D95 /* Debug */,
+				3CB3AC1E1A0E451F00EB2D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CB3ABF21A0E451F00EB2D95 /* Project object */;
+}
