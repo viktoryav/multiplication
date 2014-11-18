@@ -30,6 +30,39 @@ class MultiplicationChooseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initNumberButtons()
+        if(dataClass.firstLevelStudyType == StudyTypeEnum.LEARN_NEW)
+        {
+            initLearnNewButtons()
+        }
+        else
+        {
+            initRecapButtons()
+        }
+        
+    }
+    
+    func initRecapButtons()
+    {
+        for (buttonName, button) in dataClass.numberButtons
+        {
+            button.hidden=true
+        }
+        for choosenButtonName in dataClass.knownTimeTables
+        {
+            for (buttonName, button) in dataClass.numberButtons
+            {
+                if(choosenButtonName.description == buttonName)
+                {
+                    button.hidden=false
+                    break;
+                }
+            }
+            
+        }
+    }
+    
+    func initLearnNewButtons()
+    {
         for choosenButtonName in dataClass.knownTimeTables
         {
             for (buttonName, button) in dataClass.numberButtons
@@ -43,9 +76,7 @@ class MultiplicationChooseViewController: UIViewController {
             }
             
         }
-        // Do any additional setup after loading the view.
     }
-    
     
     
     func initNumberButtons()
@@ -67,28 +98,44 @@ class MultiplicationChooseViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        println("in prepareForSegue !backMCtoHome")
-        if segue.identifier != "backMCtoHome" {
-            println("in prepareForSegue !backMCtoHome2")
-            var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
-            if let button = sender as? UIButton {
-                println(button.titleLabel?.text)
-                dataClass.choosenTimesTable=button.titleLabel?.text
-            }
-            studyTypeViewController.dataClass=dataClass
+    @IBAction func navigate(sender: UIButton) {
+        println("in navigate")
+        dataClass.choosenTimesTable=sender.titleLabel?.text
+        println(sender.titleLabel?.text)
+        if(dataClass.firstLevelStudyType == StudyTypeEnum.LEARN_NEW)
+        {
+            println("in learn new")
+            let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("studyType")
+            //let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("studyType")
+            println("in learn new 1")
+            (viewController as StudyTypeViewController).dataClass = dataClass
+            println("in learn new 2")
+            //self.showViewController(viewController as UIViewController, sender: viewController)
+            //let t: BooleanLiteralConvertible = true;
+            //self.presentViewController(viewController, animated: true, completion: nil)
+            //self.presentViewController(viewController, animated: true, completion: nil)
+            //if (self.respondsToSelector:Selector("showViewController"))
+            //{
+                self.showViewController(viewController as UIViewController, sender: viewController)
+            //}
+            println("in learn new 3")
         }
-        
+        else
+        {
+            println("in else")
+            let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("practice")
+            println("in else 1")
+            dataClass.studyType = StudyTypeEnum.PRACTICE_ALL
+            println("in else 2")
+            (viewController as PracticeViewController).dataClass = dataClass
+            println("in else 3")
+            self.showViewController(viewController as UIViewController, sender: viewController)
+            println("in else 4")
+        }
     }
-<<<<<<< HEAD
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "backToTimeTables")
@@ -100,8 +147,5 @@ class MultiplicationChooseViewController: UIViewController {
     }
 
     
-=======
-
->>>>>>> parent of 3f9ca69... finish navigation
 
 }

@@ -30,6 +30,7 @@ class TimeTablesData {
     var calculationType:CalculationTypesEnum!
     var choosenTimesTable:String?
     var studyType:StudyTypeEnum!
+    var firstLevelStudyType:StudyTypeEnum!
     
     init()
     {
@@ -75,12 +76,28 @@ class TimeTablesData {
             }
             if(!hasIndex)
             {
-                var test = choosenTimesTable! + CalculationTypesEnum.getStringByEnum(calculationType) + index_all.description
+                var test = createTest(index_all)
                 practiceTests.append(test)
                 println(index_all)
             }
         }
         return practiceTests
+    }
+    
+    func createTest(index:Int) -> String
+    {
+        var test = ""
+        if(calculationType == CalculationTypesEnum.DIVISION)
+        {
+            var divisionElement = (choosenTimesTable!.toInt())!*index
+            test = divisionElement.description + " " + CalculationTypesEnum.getStringByEnum(calculationType) + " " + choosenTimesTable!
+        }
+        else
+        {
+            test = choosenTimesTable! + " " + CalculationTypesEnum.getStringByEnum(calculationType) + " " + index.description
+        }
+        
+        return test
     }
     
     func getRecapTestsAsString()->[String]
@@ -89,7 +106,7 @@ class TimeTablesData {
             knownTimeTables.sort{$0 < $1}
             for index in knownTimeTables
             {
-                var test = choosenTimesTable! + CalculationTypesEnum.getStringByEnum(calculationType) + index.description
+                var test = createTest(index)
                 practiceTests.append(test)
             }
         return practiceTests
@@ -100,7 +117,7 @@ class TimeTablesData {
         var practiceTests = [String]()
         for index in allTimeTablesInt
         {
-            var test = choosenTimesTable! + CalculationTypesEnum.getStringByEnum(calculationType) + index.description
+            var test = createTest(index)
             practiceTests.append(test)
         }
         return practiceTests
@@ -138,9 +155,25 @@ class TimeTablesData {
         return testsString
     }
     
+    func getTestsForPracticeAsInt() -> [Int]
+    {
+        if(studyType == StudyTypeEnum.PRACTICE_ALL)
+        {
+            return allTimeTablesInt
+        }
+        else if(studyType == StudyTypeEnum.LEARN_NEW)
+        {
+            return getLearnNewTestsAsInt()
+        }
+        else
+        {
+            return knownTimeTables
+        }
+    }
+    
 
     
-    func getPracticeTestsAsInt() -> [Int]
+    func getLearnNewTestsAsInt() -> [Int]
     {
         var practiceTests = [Int]()
         for index_all in allTimeTablesInt

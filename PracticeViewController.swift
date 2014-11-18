@@ -25,20 +25,29 @@ class PracticeViewController: UIViewController {
     @IBOutlet weak var labelTest: UILabel!
     @IBOutlet weak var labelAnswer: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var correctLabel: UILabel!
+    @IBOutlet weak var incorrectLabel: UILabel!
+    @IBOutlet weak var incorrectResultLabel: UILabel!
     
     var tests:[Int]!
     var currentTest:Int!
     var currentAnswer:Int!
+    var correctAnswers = 0
+    var incorrectAnswers = 0
     
     
     override func viewDidLoad() {
+        println("in PracticeViewController")
         super.viewDidLoad()
         println(dataClass.studyType)
-        //var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("finish"), userInfo: nil, repeats: true)
-        tests = dataClass.getPracticeTestsAsInt()
+        var timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
+        tests = dataClass.getTestsForPracticeAsInt()
         var label = getNextTest()
         labelTest.text=label
         resultLabel.text=""
+        correctLabel.text = "0"
+        incorrectLabel.text = "0"
+        incorrectResultLabel.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +58,11 @@ class PracticeViewController: UIViewController {
     func finish()
     {
         println("Timer has finished")
+        let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("resultsView")
+        (viewController as ResultsViewController).dataClass = dataClass
+        (viewController as ResultsViewController).correctAnswers = correctAnswers
+        (viewController as ResultsViewController).allAnswers=correctAnswers + incorrectAnswers
+        self.showViewController(viewController as UIViewController, sender: viewController)
     }
     
 
@@ -65,47 +79,82 @@ class PracticeViewController: UIViewController {
         {
             if(currentAnswer == label?.toInt())
             {
-                resultLabel.text = "Well done!"
-                var label = getNextTest()
-                //sleep(2)
-                labelTest.text=label
-                labelAnswer.text=""
+                amimateAnswerLabel(label!)
+                correctAnswers++
+                correctLabel.text = correctAnswers.description
             }
             else
             {
-                resultLabel.text = "Try again!"
-                labelAnswer.text=""
+                amimateWrongAnswerLabel(label!)
+                incorrectAnswers++
+                incorrectLabel.text = incorrectAnswers.description
             }
+            var nextTest = getNextTest()
+            labelTest.text=nextTest
             
         }
         else
         {
             resultLabel.text = ""
+            incorrectResultLabel.hidden=true
         }
         
     }
     
+    func amimateWrongAnswerLabel(label:String)
+    {
+        UIView.animateWithDuration(1.0,
+            delay: 0.0,
+            options: .CurveEaseInOut | .AllowUserInteraction,
+            animations: {
+                self.incorrectResultLabel.hidden=false
+                self.incorrectResultLabel.alpha = 0.0
+                self.resultLabel.text=self.currentAnswer.description
+                self.resultLabel.alpha = 0.0
+                self.labelAnswer.text=label
+                self.labelAnswer.alpha = 0.0
+            }, completion: { finished in
+                self.incorrectResultLabel.hidden=true
+                self.incorrectResultLabel.alpha = 1.0
+                self.resultLabel.text=""
+                self.resultLabel.alpha = 1.0
+                self.labelAnswer.text=""
+                self.labelAnswer.alpha = 1.0
+        })
+    }
+    
+    func amimateAnswerLabel(label:String)
+    {
+        UIView.animateWithDuration(1.0,
+            delay: 0.0,
+            options: .CurveEaseInOut | .AllowUserInteraction,
+            animations: {
+                self.labelAnswer.text=label
+                self.labelAnswer.alpha = 0.0
+                self.resultLabel.text = "Well done!"
+                self.resultLabel.alpha = 0.0
+            }, completion: { finished in
+                self.labelAnswer.text=""
+                self.labelAnswer.alpha = 1.0
+                self.resultLabel.alpha = 1.0
+                self.resultLabel.text = ""
+        })
+    }
+    
     func getNextTest() -> String
     {
-        var randomNumber : Int = Int(rand()) % (tests.count - 1)
+        var randomNumber : Int = Int(rand()) % (tests.count)
         currentTest = tests[randomNumber]
-        var testStr = dataClass.choosenTimesTable! + " " + CalculationTypesEnum.getStringByEnum(dataClass.calculationType) + " " + currentTest.description + " = "
+        var testStr = dataClass.createTest(currentTest) + " = "
         if(dataClass.calculationType == CalculationTypesEnum.MULTIPLICATION)
         {
             currentAnswer = currentTest*dataClass.choosenTimesTable!.toInt()!
         }
+        else
+        {
+            currentAnswer = currentTest
+        }
         return testStr
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
