@@ -40,7 +40,7 @@ class PracticeViewController: UIViewController {
         println("in PracticeViewController")
         super.viewDidLoad()
         println(dataClass.studyType)
-        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
         tests = dataClass.getTestsForPracticeAsInt()
         var label = getNextTest()
         labelTest.text=label
@@ -79,22 +79,19 @@ class PracticeViewController: UIViewController {
         {
             if(currentAnswer == label?.toInt())
             {
-                resultLabel.text = "Well done!"
+                amimateAnswerLabel(label!)
                 correctAnswers++
                 correctLabel.text = correctAnswers.description
             }
             else
             {
-                incorrectResultLabel.hidden=false
-                resultLabel.text = currentAnswer.description
-                labelAnswer.text=""
+                amimateWrongAnswerLabel(label!)
                 incorrectAnswers++
                 incorrectLabel.text = incorrectAnswers.description
             }
-            var label = getNextTest()
-            //sleep(2)
-            labelTest.text=label
-            labelAnswer.text=""
+            var nextTest = getNextTest()
+            labelTest.text=nextTest
+            
         }
         else
         {
@@ -102,6 +99,46 @@ class PracticeViewController: UIViewController {
             incorrectResultLabel.hidden=true
         }
         
+    }
+    
+    func amimateWrongAnswerLabel(label:String)
+    {
+        UIView.animateWithDuration(1.0,
+            delay: 0.0,
+            options: .CurveEaseInOut | .AllowUserInteraction,
+            animations: {
+                self.incorrectResultLabel.hidden=false
+                self.incorrectResultLabel.alpha = 0.0
+                self.resultLabel.text=self.currentAnswer.description
+                self.resultLabel.alpha = 0.0
+                self.labelAnswer.text=label
+                self.labelAnswer.alpha = 0.0
+            }, completion: { finished in
+                self.incorrectResultLabel.hidden=true
+                self.incorrectResultLabel.alpha = 1.0
+                self.resultLabel.text=""
+                self.resultLabel.alpha = 1.0
+                self.labelAnswer.text=""
+                self.labelAnswer.alpha = 1.0
+        })
+    }
+    
+    func amimateAnswerLabel(label:String)
+    {
+        UIView.animateWithDuration(1.0,
+            delay: 0.0,
+            options: .CurveEaseInOut | .AllowUserInteraction,
+            animations: {
+                self.labelAnswer.text=label
+                self.labelAnswer.alpha = 0.0
+                self.resultLabel.text = "Well done!"
+                self.resultLabel.alpha = 0.0
+            }, completion: { finished in
+                self.labelAnswer.text=""
+                self.labelAnswer.alpha = 1.0
+                self.resultLabel.alpha = 1.0
+                self.resultLabel.text = ""
+        })
     }
     
     func getNextTest() -> String

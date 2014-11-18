@@ -102,20 +102,38 @@ class MultiplicationChooseViewController: UIViewController {
     
     
     @IBAction func navigate(sender: UIButton) {
-        
+        println("in navigate")
         dataClass.choosenTimesTable=sender.titleLabel?.text
+        println(sender.titleLabel?.text)
         if(dataClass.firstLevelStudyType == StudyTypeEnum.LEARN_NEW)
         {
+            println("in learn new")
             let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("studyType")
+            //let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("studyType")
+            println("in learn new 1")
             (viewController as StudyTypeViewController).dataClass = dataClass
-            self.showViewController(viewController as UIViewController, sender: viewController)
-                    }
+            println("in learn new 2")
+            //self.showViewController(viewController as UIViewController, sender: viewController)
+            //let t: BooleanLiteralConvertible = true;
+            //self.presentViewController(viewController, animated: true, completion: nil)
+            //self.presentViewController(viewController, animated: true, completion: nil)
+            //if (self.respondsToSelector:Selector("showViewController"))
+            //{
+                self.showViewController(viewController as UIViewController, sender: viewController)
+            //}
+            println("in learn new 3")
+        }
         else
         {
+            println("in else")
             let viewController:AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("practice")
+            println("in else 1")
             dataClass.studyType = StudyTypeEnum.PRACTICE_ALL
+            println("in else 2")
             (viewController as PracticeViewController).dataClass = dataClass
+            println("in else 3")
             self.showViewController(viewController as UIViewController, sender: viewController)
+            println("in else 4")
         }
     }
     

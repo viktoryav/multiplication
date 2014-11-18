@@ -814,17 +814,6 @@
                                 <color key="textColor" red="0.34661796659999999" green="0.95686274510000002" blue="0.65864624270000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFh-26-DGR">
-                                <rect key="frame" x="86" y="291" width="148" height="48"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <state key="normal" title="Multiply Now!">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="toDivideNow" id="dbe-ol-Wfz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUc-tq-pF7">
                                 <rect key="frame" x="100" y="436" width="121" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
@@ -845,6 +834,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="gHa-RP-XQa" kind="show" identifier="toChangeTimeTable" id="f6d-JN-2p8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFh-26-DGR">
+                                <rect key="frame" x="86" y="281" width="148" height="48"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <state key="normal" title="Multiply Now!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="toDivideNow" id="dbe-ol-Wfz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -887,10 +887,10 @@
         <image name="canstockphoto16058687.jpg" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7J5-Ni-22w"/>
-        <segue reference="dbe-ol-Wfz"/>
         <segue reference="tAc-Eh-CiI"/>
+        <segue reference="SPE-d5-8X0"/>
+        <segue reference="zxu-qM-0PC"/>
         <segue reference="mWU-PV-0uz"/>
-        <segue reference="iwT-md-krG"/>
+        <segue reference="7J5-Ni-22w"/>
     </inferredMetricsTieBreakers>
 </document>
