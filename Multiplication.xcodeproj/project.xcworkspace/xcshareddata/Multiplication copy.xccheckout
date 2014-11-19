@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1578A138-4392-4B2A-AE4B-415DB5BFFCEE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Multiplication copy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8249F4ACD0C7E13119A61175CF0B3E462AD7D9E4</key>
+		<string>https://github.com/viktoryav/multiplication.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Multiplication copy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8249F4ACD0C7E13119A61175CF0B3E462AD7D9E4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/viktoryav/multiplication.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8249F4ACD0C7E13119A61175CF0B3E462AD7D9E4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8249F4ACD0C7E13119A61175CF0B3E462AD7D9E4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>multiplication_phase2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

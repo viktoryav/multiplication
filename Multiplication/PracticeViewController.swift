@@ -97,6 +97,17 @@ class PracticeViewController: UIViewController {
         
     }
     
+    @IBAction func navigateBack(sender: UIButton) {
+        if(dataClass.knownTimeTables.count==0 || dataClass.isInKnownTables())
+        {
+            performSegueWithIdentifier("backToMC", sender: sender)
+        }
+        else
+        {
+            performSegueWithIdentifier("backToST", sender: sender)
+        }
+    }
+    
     func amimateWrongAnswerLabel(label:String)
     {
         UIView.animateWithDuration(1.0,
@@ -165,12 +176,12 @@ class PracticeViewController: UIViewController {
             timer?.invalidate()
             var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
             studyTypeViewController.dataClass=dataClass
-        }/*else if (segue.identifier=="backToMC")
+        }else if (segue.identifier=="backToMC")
         {
             timer?.invalidate()
             var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
             multiplicationChooseViewController.dataClass=dataClass
-        }*/
+        }
     }
 
 }
