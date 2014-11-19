@@ -30,38 +30,11 @@ class MultiplicationChooseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initNumberButtons()
-        if(dataClass.firstLevelStudyType == StudyTypeEnum.LEARN_NEW)
-        {
-            initLearnNewButtons()
-        }
-        else
-        {
-            initRecapButtons()
-        }
-        
+        initButtons()
     }
     
-    func initRecapButtons()
-    {
-        for (buttonName, button) in dataClass.numberButtons
-        {
-            button.hidden=true
-        }
-        for choosenButtonName in dataClass.knownTimeTables
-        {
-            for (buttonName, button) in dataClass.numberButtons
-            {
-                if(choosenButtonName.description == buttonName)
-                {
-                    button.hidden=false
-                    break;
-                }
-            }
-            
-        }
-    }
     
-    func initLearnNewButtons()
+    func initButtons()
     {
         for choosenButtonName in dataClass.knownTimeTables
         {
@@ -69,8 +42,7 @@ class MultiplicationChooseViewController: UIViewController {
             {
                 if(choosenButtonName.description == buttonName)
                 {
-                    println("in selected")
-                    button.hidden=true
+                    button.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
                     break;
                 }
             }
@@ -78,6 +50,10 @@ class MultiplicationChooseViewController: UIViewController {
         }
     }
     
+    @IBAction func readButtonAndNavigate(sender: UIButton) {
+        dataClass.choosenTimesTable=sender.titleLabel?.text
+        performSegueWithIdentifier("navigateToST", sender: sender)
+    }
     
     func initNumberButtons()
     {
@@ -101,32 +77,18 @@ class MultiplicationChooseViewController: UIViewController {
     }
     
     
-    @IBAction func navigate(sender: UIButton) {
-        println("in navigate")
-        dataClass.choosenTimesTable=sender.titleLabel?.text
-        println(sender.titleLabel?.text)
-        if(dataClass.firstLevelStudyType == StudyTypeEnum.LEARN_NEW)
-        {
-            performSegueWithIdentifier("navigateToST", sender: sender)
-        }
-        else
-        {
-            performSegueWithIdentifier("navigateToP", sender: sender)
-        }
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier=="navigateToST")
         {
             var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
             studyTypeViewController.dataClass=dataClass
         }
-        else if(segue.identifier=="navigateToP")
+        /*else if(segue.identifier=="navigateToP")
         {
             dataClass.studyType = StudyTypeEnum.PRACTICE_ALL
             var practiceViewController: PracticeViewController = segue.destinationViewController as PracticeViewController
             practiceViewController.dataClass=dataClass
-        }
+        }*/
         else if(segue.identifier == "backToTimeTables")
         {
             var multiplicationViewController: MultiplicationViewController = segue.destinationViewController as MultiplicationViewController

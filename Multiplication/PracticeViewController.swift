@@ -40,8 +40,7 @@ class PracticeViewController: UIViewController {
     override func viewDidLoad() {
         println("in PracticeViewController")
         super.viewDidLoad()
-        println(dataClass.studyType)
-        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
         
         tests = dataClass.getTestsForPracticeAsInt()
         var label = getNextTest()
@@ -166,7 +165,12 @@ class PracticeViewController: UIViewController {
             timer?.invalidate()
             var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
             studyTypeViewController.dataClass=dataClass
-        }
+        }/*else if (segue.identifier=="backToMC")
+        {
+            timer?.invalidate()
+            var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
+            multiplicationChooseViewController.dataClass=dataClass
+        }*/
     }
 
 }

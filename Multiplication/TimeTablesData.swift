@@ -30,7 +30,6 @@ class TimeTablesData {
     var calculationType:CalculationTypesEnum!
     var choosenTimesTable:String?
     var studyType:StudyTypeEnum!
-    var firstLevelStudyType:StudyTypeEnum!
     
     init()
     {
@@ -52,6 +51,18 @@ class TimeTablesData {
         choosenTimesTable = nil
     }
     
+    func isInKnownTables() -> Bool
+    {
+        for index in knownTimeTables
+        {
+            if(choosenTimesTable == index.description)
+            {
+                return true
+            }
+        }
+        return false
+    }
+    
     func initTimeTables()
     {
         allTimeTablesInt.append(one)
@@ -69,7 +80,7 @@ class TimeTablesData {
     }
     
     
-    func getPracticeTestsAsString() -> [String]
+    func getLearnNewTestsAsString() -> [String]
     {
         var practiceTests = [String]()
         for index_all in allTimeTablesInt
@@ -154,16 +165,6 @@ class TimeTablesData {
         return testsString
     }
     
-    func getTestsIntAsString(tests:[Int])->String
-    {
-        var testsString=""
-        for test in tests
-        {
-            testsString = testsString + test.description + ","
-            
-        }
-        return testsString
-    }
     
     func getTestsForPracticeAsInt() -> [Int]
     {
@@ -222,15 +223,10 @@ class TimeTablesData {
     
     func changeColorForButtonHelper(sender:UIButton)
     {
-        println((sender.titleLabel?.text)!)
         var dictinaryKey = (sender.titleLabel?.text)!
         var button = numberButtons[dictinaryKey]
         var selected = button?.selected
-        println("before selected")
-        println(button?.selected)
-        button?.selected = !selected!
-        println(numberButtons[dictinaryKey]?.selected)
-        
+        button?.selected = !selected!        
     }
 
     

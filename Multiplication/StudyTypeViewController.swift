@@ -19,9 +19,10 @@ class StudyTypeViewController: UIViewController {
     @IBOutlet weak var recapButton: UIButton!
     
     @IBOutlet weak var practiceAllButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(dataClass.knownTimeTables.count==0)
+        if(dataClass.knownTimeTables.count==0 || dataClass.isInKnownTables())
         {
             recapLabel.hidden = true
             practiceAllLabel.hidden = true
@@ -33,7 +34,7 @@ class StudyTypeViewController: UIViewController {
             recapLabel.text = dataClass.getTestsAsString(dataClass.getRecapTestsAsString())
             practiceAllLabel.text = dataClass.getTestsAsString(dataClass.getAllTestsAsString())
         }
-        learnNewLabel.text = dataClass.getTestsAsString(dataClass.getPracticeTestsAsString())
+        learnNewLabel.text = dataClass.getTestsAsString(dataClass.getLearnNewTestsAsString())
         
     }
 

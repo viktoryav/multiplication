@@ -67,14 +67,8 @@ class MultiplicationViewController: UIViewController {
         if segue.identifier == "goMultiplicationChoose" {
             dataClass.fillTimeTablesArray()
             var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
-            dataClass.firstLevelStudyType = StudyTypeEnum.LEARN_NEW
             multiplicationChooseViewController.dataClass=dataClass
-        } else if segue.identifier == "firstLevelRecap" {
-            dataClass.fillTimeTablesArray()
-            var multiplicationChooseViewController: MultiplicationChooseViewController = segue.destinationViewController as MultiplicationChooseViewController
-            dataClass.firstLevelStudyType = StudyTypeEnum.RECAP
-            multiplicationChooseViewController.dataClass=dataClass
-        }else if segue.identifier == "backToCT"{
+        } else if segue.identifier == "backToCT"{
             var viewController:ViewController = segue.destinationViewController as ViewController
         }
         

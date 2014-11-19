@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rb9-zl-bmO">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -74,7 +73,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPq-rZ-LuT">
-                                <rect key="frame" x="120" y="428" width="80" height="48"/>
+                                <rect key="frame" x="29" y="428" width="80" height="48"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,17 +81,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="show" identifier="backToCT" id="pcd-3M-vPq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIq-HB-0L6">
-                                <rect key="frame" x="210" y="435" width="94" height="34"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <state key="normal" title="Learn">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="gHa-RP-XQa" kind="show" identifier="goMultiplicationChoose" id="bWa-AG-yLd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGj-ME-E7d">
@@ -245,15 +233,15 @@
                                     <action selector="changeColorForButton:" destination="aLh-Gw-iSE" eventType="touchUpInside" id="Hwb-CU-oPa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vv-i9-Mnq">
-                                <rect key="frame" x="16" y="428" width="85" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIq-HB-0L6">
+                                <rect key="frame" x="205" y="431" width="80" height="42"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <state key="normal" title="Recap">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gHa-RP-XQa" kind="show" identifier="firstLevelRecap" id="gJF-ee-4t1"/>
+                                    <segue destination="gHa-RP-XQa" kind="show" identifier="goMultiplicationChoose" id="bWa-AG-yLd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -305,7 +293,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Beu-fJ-CBs"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="c8z-N3-lnX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZa-14-nRd">
@@ -317,7 +305,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="DF4-4j-tml"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Bhp-VX-MUK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtn-xL-N5d">
@@ -329,7 +317,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="5zu-OP-1I8"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="zlD-qz-S7d"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Which time table do you want to learn?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swc-i4-DMG">
@@ -347,7 +335,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="YNr-Sg-F8n"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="ENs-nP-5J7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp4-w5-Kj3">
@@ -359,7 +347,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="cqf-C9-hgC"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="3p1-QA-sYr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Has-qA-Hes">
@@ -371,7 +359,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="LTd-PF-RsH"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="8iG-66-1Ea"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzR-M5-fZs">
@@ -383,7 +371,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="YpC-89-jDa"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="bdg-wb-R58"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhs-GK-G3o">
@@ -395,7 +383,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Mqx-gV-eks"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="ZpL-Fg-C2c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-UR-mnR">
@@ -407,7 +395,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="Tsv-89-rdk"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="ACD-S2-68e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp5-ch-lcq">
@@ -419,7 +407,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="OSa-hA-7OB"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="jlF-mh-bcV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-md-JZd">
@@ -431,7 +419,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="QCT-sN-gDW"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="ZRS-8y-aQU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ke-su-rSr">
@@ -443,8 +431,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="navigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="JYu-ph-HVD"/>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="navigateToST" id="LbE-pJ-C9G"/>
+                                    <action selector="readButtonAndNavigate:" destination="gHa-RP-XQa" eventType="touchUpInside" id="yuG-8u-uYB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uks-sO-Gwc">
@@ -456,6 +443,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="aLh-Gw-iSE" kind="show" identifier="backToTimeTables" id="iwT-md-krG"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ia5-xy-KqT">
+                                <rect key="frame" x="131" y="524" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="navigateToST" id="Jg7-Zl-Nr4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -761,7 +758,7 @@
                                 <color key="textColor" red="0.95686274510000002" green="0.25565041469999999" blue="0.24743739579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-5S-mCk">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-5S-mCk">
                                 <rect key="frame" x="130" y="530" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -781,7 +778,7 @@
                                 </state>
                                 <connections>
                                     <action selector="readNumber:" destination="dxO-7M-uSz" eventType="touchUpInside" id="jue-rG-tQG"/>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="backToST" id="HVy-r8-BEP"/>
+                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="backToST" id="ZLk-Qo-2aw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -811,7 +808,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2N0-Xu-190" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679" y="738"/>
+            <point key="canvasLocation" x="2075" y="-42"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="d1V-9d-gsa">
@@ -924,10 +921,10 @@
         <image name="canstockphoto16058687.jpg" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9YS-k0-Ggf"/>
-        <segue reference="dbe-ol-Wfz"/>
-        <segue reference="f6d-JN-2p8"/>
-        <segue reference="tAc-Eh-CiI"/>
-        <segue reference="EH0-W0-GDn"/>
+        <segue reference="6ff-MC-6Xv"/>
+        <segue reference="ZLk-Qo-2aw"/>
+        <segue reference="bWa-AG-yLd"/>
+        <segue reference="iwT-md-krG"/>
+        <segue reference="pcd-3M-vPq"/>
     </inferredMetricsTieBreakers>
 </document>
