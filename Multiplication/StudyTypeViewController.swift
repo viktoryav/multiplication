@@ -28,7 +28,6 @@ class StudyTypeViewController: UIViewController {
             practiceAllLabel.hidden = true
             practiceAllButton.hidden = true
             recapButton.hidden = true
-            
         }
         else
         {

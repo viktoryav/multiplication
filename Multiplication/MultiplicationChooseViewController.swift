@@ -52,16 +52,7 @@ class MultiplicationChooseViewController: UIViewController {
     
     @IBAction func readButtonAndNavigate(sender: UIButton) {
         dataClass.choosenTimesTable=sender.titleLabel?.text
-        if(dataClass.knownTimeTables.count==0 || dataClass.isInKnownTables())
-        {
-            performSegueWithIdentifier("navigateToP", sender: sender)
-        }
-        else
-        {
-            performSegueWithIdentifier("navigateToST", sender: sender)
-
-        }
-        
+        performSegueWithIdentifier("navigateToST", sender: sender)
     }
     
     func initNumberButtons()
@@ -92,12 +83,12 @@ class MultiplicationChooseViewController: UIViewController {
             var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
             studyTypeViewController.dataClass=dataClass
         }
-        else if(segue.identifier=="navigateToP")
+        /*else if(segue.identifier=="navigateToP")
         {
             dataClass.studyType = StudyTypeEnum.PRACTICE_ALL
             var practiceViewController: PracticeViewController = segue.destinationViewController as PracticeViewController
             practiceViewController.dataClass=dataClass
-        }
+        }*/
         else if(segue.identifier == "backToTimeTables")
         {
             var multiplicationViewController: MultiplicationViewController = segue.destinationViewController as MultiplicationViewController
