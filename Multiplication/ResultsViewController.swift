@@ -36,30 +36,45 @@ class ResultsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func playAgainNavigation(sender: UIButton) {
+        navigate(sender)
+    }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("in ResultsViewController prepareForSegue")
-        println(segue.identifier)
-
-        
-        if(segue.identifier=="toDivideNow")
+    @IBAction func changeCalculationTypeNavigation(sender: UIButton) {
+        if(dataClass.calculationType == CalculationTypesEnum.MULTIPLICATION)
         {
-            if(dataClass.calculationType == CalculationTypesEnum.MULTIPLICATION)
-            {
-                dataClass.calculationType = CalculationTypesEnum.DIVISION
-            }
-            else
-            {
-                dataClass.calculationType = CalculationTypesEnum.MULTIPLICATION
-            }
+            dataClass.calculationType = CalculationTypesEnum.DIVISION
+        }
+        else
+        {
+            dataClass.calculationType = CalculationTypesEnum.MULTIPLICATION
+        }
+        navigate(sender)
+    }
+    
+    func navigate(sender:UIButton)
+    {
+        if(dataClass.knownTimeTables.count==0 || dataClass.isInKnownTables())
+        {
+            performSegueWithIdentifier("rNavigateToP", sender: sender)
+        }
+        else
+        {
+            performSegueWithIdentifier("rNavigateToST", sender: sender)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier=="rNavigateToST")
+        {
             var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
             studyTypeViewController.dataClass=dataClass
 
         }
-        else if(segue.identifier=="toPlayAgain")
+        else if(segue.identifier=="rNavigateToP")
         {
-            var studyTypeViewController: StudyTypeViewController = segue.destinationViewController as StudyTypeViewController
-            studyTypeViewController.dataClass=dataClass
+            var practiceViewController: PracticeViewController = segue.destinationViewController as PracticeViewController
+            practiceViewController.dataClass=dataClass
 
         }
         else if(segue.identifier=="toChangeTimeTable")

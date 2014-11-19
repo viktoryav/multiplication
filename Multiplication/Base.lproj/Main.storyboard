@@ -745,12 +745,6 @@
                                     <action selector="readNumber:" destination="dxO-7M-uSz" eventType="touchUpInside" id="Gbs-ed-crK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-kL-46P">
-                                <rect key="frame" x="191" y="132" width="57" height="28"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Well done!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSn-O2-o7c">
                                 <rect key="frame" x="135" y="72" width="113" height="28"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
@@ -812,6 +806,12 @@
                                     <segue destination="Tbb-nb-h9R" kind="show" identifier="backToST" id="ncq-qe-8G5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-kL-46P">
+                                <rect key="frame" x="203" y="132" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -864,7 +864,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="toPlayAgain" id="SPE-d5-8X0"/>
+                                    <action selector="playAgainNavigation:" destination="U6F-Vv-Nxu" eventType="touchUpInside" id="c67-jg-B5g"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've done 15 from 20 right" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVw-dc-Etf">
@@ -909,7 +909,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="toDivideNow" id="dbe-ol-Wfz"/>
+                                    <action selector="changeCalculationTypeNavigation:" destination="U6F-Vv-Nxu" eventType="touchUpInside" id="7gN-Zg-CtL"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rS-jZ-Hb1">
+                                <rect key="frame" x="23" y="11" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tbb-nb-h9R" kind="show" identifier="rNavigateToST" id="d3P-Qq-AtX"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVB-89-Caj">
+                                <rect key="frame" x="258" y="11" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dxO-7M-uSz" kind="show" identifier="rNavigateToP" id="a7e-ee-mqJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -953,9 +973,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iwT-md-krG"/>
-        <segue reference="Kdx-gT-Mhr"/>
-        <segue reference="ARW-dM-4xT"/>
-        <segue reference="Jg7-Zl-Nr4"/>
-        <segue reference="pcd-3M-vPq"/>
+        <segue reference="f6d-JN-2p8"/>
+        <segue reference="a7e-ee-mqJ"/>
+        <segue reference="tAc-Eh-CiI"/>
+        <segue reference="d3P-Qq-AtX"/>
     </inferredMetricsTieBreakers>
 </document>
