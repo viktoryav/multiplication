@@ -38,7 +38,6 @@ class PracticeViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        println("in PracticeViewController")
         super.viewDidLoad()
         timer = NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: Selector("finish"), userInfo: nil, repeats: false)
         

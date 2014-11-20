@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXO-s1-Vwb">
-                                <rect key="frame" x="64" y="137" width="192" height="75"/>
+                                <rect key="frame" x="64" y="111" width="192" height="75"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
                                 <state key="normal" title="Multiplication">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uR-zs-5TV">
-                                <rect key="frame" x="64" y="326" width="192" height="75"/>
+                                <rect key="frame" x="64" y="297" width="192" height="75"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
                                 <state key="normal" title="Division">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,6 +40,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="aLh-Gw-iSE" kind="show" identifier="goDivisionMain" id="zxu-qM-0PC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtQ-M0-mdH">
+                                <rect key="frame" x="106" y="445" width="109" height="30"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openPrivacyPolicy:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="45I-eS-DLq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1000,10 +1011,10 @@
         <image name="canstockphoto16058687.jpg" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iwT-md-krG"/>
-        <segue reference="f6d-JN-2p8"/>
-        <segue reference="a7e-ee-mqJ"/>
+        <segue reference="zxu-qM-0PC"/>
         <segue reference="tAc-Eh-CiI"/>
+        <segue reference="a7e-ee-mqJ"/>
         <segue reference="d3P-Qq-AtX"/>
+        <segue reference="f6d-JN-2p8"/>
     </inferredMetricsTieBreakers>
 </document>
